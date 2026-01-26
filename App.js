@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, StatusBar, ImageBackground, Alert } from 'react-native';
+import { StyleSheet, StatusBar, ImageBackground, Alert, Platform } from 'react-native';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Feather } from '@expo/vector-icons';
-import * as Notifications from 'expo-notifications';
+import Feather from 'react-native-vector-icons/Feather';
+import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import PartyScreen from './screens/PartyScreen';
@@ -117,19 +117,11 @@ function MainTabs() {
 
 export default function App() {
   useEffect(() => {
-    (async () => {
-      const { status } = await Notifications.requestPermissionsAsync();
-      if (status !== 'granted') {
+    if (Platform.OS !== 'ios') return;
+    PushNotificationIOS.requestPermissions().then((permissions) => {
+      if (!permissions.alert) {
         Alert.alert('Permission not granted to show notifications');
       }
-    })();
-
-    Notifications.setNotificationHandler({
-      handleNotification: async () => ({
-        shouldShowAlert: true,
-        shouldPlaySound: false,
-        shouldSetBadge: false,
-      }),
     });
   }, []);
 

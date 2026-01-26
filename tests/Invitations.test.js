@@ -13,13 +13,6 @@ jest.mock('react-native-gesture-handler', () => {
   };
 });
 
-jest.mock('expo-device', () => ({
-  osName: 'iOS',
-  osVersion: '14.0',
-}));
-
-process.env.EXPO_OS = process.env.EXPO_OS || 'ios';
-
 // Import screens under test
 import EditInvitationScreen from '../screens/GuestList/EditInvitationScreen';
 import InvitationSendFlow from '../screens/GuestList/InvitationSendFlow';

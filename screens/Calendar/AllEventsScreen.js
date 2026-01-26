@@ -2,7 +2,7 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { View, StyleSheet, ImageBackground, TouchableOpacity, ScrollView } from 'react-native';
 import { Text, Card } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { MaterialIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const EVENTS_KEY = '@events';
 const TASKS_KEY = '@tasks';

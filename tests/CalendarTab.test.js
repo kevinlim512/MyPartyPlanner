@@ -25,11 +25,6 @@ jest.mock('react-native-gesture-handler', () => {
   };
 });
 
-jest.mock('expo-device', () => ({
-  osName: 'iOS',
-  osVersion: '14.0',
-}));
-
 jest.mock('react-native-calendars', () => {
   const React = require('react');
   const { View, Text } = require('react-native');
@@ -40,8 +35,6 @@ jest.mock('react-native-calendars', () => {
   );
   return { Calendar: MockCalendar };
 });
-
-process.env.EXPO_OS = process.env.EXPO_OS || 'ios';
 
 jest.mock('@react-native-async-storage/async-storage', () =>
   require('@react-native-async-storage/async-storage/jest/async-storage-mock')

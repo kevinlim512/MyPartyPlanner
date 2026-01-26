@@ -14,7 +14,7 @@ import {
 import { Text } from 'react-native-paper';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { MaterialIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const PARTY_INFO_KEY = '@party_info';
 const EVENTS_KEY = '@events';

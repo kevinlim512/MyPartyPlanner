@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity, FlatList, ImageBackground } from 'r
 import { Text } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
-import { MaterialIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const INVITES_KEY = '@invitations';
 

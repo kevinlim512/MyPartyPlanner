@@ -13,7 +13,6 @@ import { Text } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import * as Device from 'expo-device';
 
 const INVITES_KEY = '@invitations';
 const GUESTS_KEY = '@guests';

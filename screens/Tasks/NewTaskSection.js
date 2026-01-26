@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, TextInput, TouchableOpacity, Modal, Keyboard } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import { Text, Checkbox } from 'react-native-paper';
-import { MaterialIcons } from '@expo/vector-icons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default function NewTaskSection(props) {
   const {

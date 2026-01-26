@@ -1,0 +1,113 @@
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+# React Native new architecture is enabled by default; disable it for stability.
+# This also avoids react-native-screens (Fabric) linker issues on some setups.
+ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+
+min_ios_version = min_ios_version_supported.to_f
+ios_deployment_target = min_ios_version < 12.0 ? '12.0' : min_ios_version_supported
+ENV['IPHONEOS_DEPLOYMENT_TARGET'] = ios_deployment_target
+
+platform :ios, ios_deployment_target
+prepare_react_native_project!
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+
+target 'TaskManagerApp' do
+  inhibit_all_warnings!
+
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  target 'TaskManagerAppTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+      # :ccache_enabled => true
+    )
+
+    # React Native's ReactCodegen "Generate Specs" script phase breaks when the project path contains
+    # spaces (e.g. "FINAL SUBMISSION"), because it shells out via `sh -c` without quoting.
+    # Patch the generated Pods project to source the environment script and then run the phase script.
+    installer.pods_project.targets.each do |target|
+      next unless target.name == 'ReactCodegen'
+
+      target.shell_script_build_phases.each do |phase|
+        next unless phase.name == '[CP-User] Generate Specs'
+
+        phase.shell_script = phase.shell_script.gsub(
+          %q(/bin/sh -c "$WITH_ENVIRONMENT $SCRIPT_PHASES_SCRIPT"),
+          %Q(. "$WITH_ENVIRONMENT"\n"$SCRIPT_PHASES_SCRIPT")
+        )
+      end
+    end
+
+    # Silence Xcode warnings about Pods using older deployment targets.
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = ios_deployment_target
+      end
+    end
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = ios_deployment_target
+    end
+
+    # Silence Xcode warnings about script phases lacking outputs by giving those
+    # phases explicit outputs and touching them.
+    def ensure_script_output(phase, output_path, touch_command)
+      phase.output_paths ||= []
+      phase.output_paths << output_path unless phase.output_paths.include?(output_path)
+
+      phase.shell_script = "#{phase.shell_script}\n\n#{touch_command}\n" unless phase.shell_script.include?(touch_command)
+    end
+
+    installer.pods_project.targets.each do |target|
+      target.shell_script_build_phases.each do |phase|
+        next unless phase.name
+
+        case phase.name
+        when '[CP-User] [RN]Check rncore'
+          output_path = '${DERIVED_FILE_DIR}/rncore-check-${TARGET_NAME}.log'
+          ensure_script_output(phase, output_path, "echo OK > \"#{output_path}\"")
+        when '[CP-User] [Hermes] Replace Hermes for the right configuration, if needed'
+          output_path = '${DERIVED_FILE_DIR}/hermes-replace-${TARGET_NAME}.log'
+          ensure_script_output(phase, output_path, "echo OK > \"#{output_path}\"")
+        end
+      end
+    end
+
+    # Silence warnings from third-party pods that we don't control.
+    warning_targets = %w[DoubleConversion SocketRocket glog RCT-Folly]
+    installer.pods_project.targets.each do |target|
+      next unless warning_targets.include?(target.name)
+
+      target.build_configurations.each do |config|
+        config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = 'YES'
+        config.build_settings['CLANG_WARN_DEPRECATED_DECLARATIONS'] = 'NO'
+        config.build_settings['CLANG_WARN_UNREACHABLE_CODE'] = 'NO'
+        config.build_settings['GCC_WARN_UNUSED_CONST_VARIABLE'] = 'NO'
+      end
+    end
+  end
+end

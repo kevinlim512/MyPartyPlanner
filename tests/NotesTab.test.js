@@ -22,14 +22,12 @@ jest.mock('react-native-safe-area-context', () => {
   };
 });
 
-// Mock @expo/vector-icons (MaterialIcons) to render a simple component.
+// Mock vector icons (MaterialIcons) to render a simple component.
 // Lazy require for Text to avoid out-of-scope errors.
-jest.mock('@expo/vector-icons', () => {
+jest.mock('react-native-vector-icons/MaterialIcons', () => {
   const React = require('react');
   const { Text } = require('react-native');
-  return {
-    MaterialIcons: (props) => <Text {...props}>Icon</Text>,
-  };
+  return (props) => <Text {...props}>Icon</Text>;
 });
 
 // --- Test Suite ---
