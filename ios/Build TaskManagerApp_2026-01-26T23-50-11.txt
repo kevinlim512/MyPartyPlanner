@@ -1,0 +1,166 @@
+
+Showing All Issues
+
+Build target SocketRocket of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'SocketRocket' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RCTDeprecation of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 4.3, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RCTDeprecation' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 4.3, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target BEMCheckBox of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 7.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'BEMCheckBox' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 7.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target hermes-engine of project Pods with configuration Debug
+warning: Run script build phase '[CP-User] [Hermes] Replace Hermes for the right configuration, if needed' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'hermes-engine' from project 'Pods')
+
+
+Run script build phase '[CP-User] [Hermes] Replace Hermes for the right configuration, if needed' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase.
+
+
+Build target RNCAsyncStorage-RNCAsyncStorage_resources of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCAsyncStorage-RNCAsyncStorage_resources' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCPushNotificationIOS of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCPushNotificationIOS' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCCheckbox of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCCheckbox' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCAsyncStorage of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCAsyncStorage' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNDateTimePicker of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNDateTimePicker' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target React-Fabric of project Pods with configuration Debug
+warning: Run script build phase '[CP-User] [RN]Check rncore' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'React-Fabric' from project 'Pods')
+
+
+Run script build phase '[CP-User] [RN]Check rncore' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase.
+
+
+Build target React-FabricComponents of project Pods with configuration Debug
+warning: Run script build phase '[CP-User] [RN]Check rncore' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'React-FabricComponents' from project 'Pods')
+
+
+Run script build phase '[CP-User] [RN]Check rncore' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase.
+
+
+Build target RNGestureHandler of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNGestureHandler' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target react-native-pager-view of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'react-native-pager-view' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target react-native-pager-view of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'react-native-pager-view' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNDateTimePicker of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNDateTimePicker' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNGestureHandler of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNGestureHandler' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RCTDeprecation of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 4.3, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RCTDeprecation' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 4.3, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCCheckbox of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCCheckbox' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target BEMCheckBox of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 7.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'BEMCheckBox' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 7.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCAsyncStorage-RNCAsyncStorage_resources of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCAsyncStorage-RNCAsyncStorage_resources' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCAsyncStorage of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCAsyncStorage' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target SocketRocket of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'SocketRocket' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+Build target RNCPushNotificationIOS of project Pods with configuration Debug
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99. (in target 'RNCPushNotificationIOS' from project 'Pods')
+
+
+/Users/kevin/FINALSUBMISSION/ios/Pods/Pods.xcodeproj: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 10.0, but the range of supported deployment target versions is 12.0 to 26.2.99.
+
+
+
+Build succeeded    26/1/26, 23:50    2.2 seconds

@@ -1,4 +1,4 @@
-# MyPartyPlanner (TaskManagerApp)
+# MyPartyPlanner
 
 MyPartyPlanner is a React Native app for planning an event/party in one place: party details, tasks, shopping list, guest list, invitations, calendar, and notes.
 
@@ -55,7 +55,7 @@ npm run android
 npm test
 ```
 
-## Privacy Policy (App Store)
+## Privacy Policy
 
 **Effective date:** January 26, 2026
 

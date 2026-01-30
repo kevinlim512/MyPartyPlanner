@@ -1,4 +1,4 @@
-# Privacy Policy for MyPartyPlanner (TaskManagerApp)
+# Privacy Policy for MyPartyPlanner
 
 **Effective date:** January 26, 2026
 

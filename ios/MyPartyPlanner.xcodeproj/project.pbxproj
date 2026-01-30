@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* TaskManagerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TaskManagerAppTests.m */; };
 		0A48C1D62F2112DA00BB52C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A48C1D52F2112DA00BB52C5 /* Assets.xcassets */; };
-		0C80B921A6F3F58F76C31292 /* libPods-TaskManagerApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-TaskManagerApp.a */; };
 		10F7168014DF8426421F4B34 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-TaskManagerApp-TaskManagerAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-TaskManagerApp-TaskManagerAppTests.a */; };
+		6BC896FC52694C69CB1096B0 /* libPods-MyPartyPlanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB165892A2F626EDCA9744F /* libPods-MyPartyPlanner.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E36806047A4F9A69A20F657A /* libPods-MyPartyPlanner-TaskManagerAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61C4D6A401BE6C0009C4FB71 /* libPods-MyPartyPlanner-TaskManagerAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 		00E356EE1AD99517003FC87E /* TaskManagerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskManagerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TaskManagerAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskManagerAppTests.m; sourceTree = "<group>"; };
+		0A068B6D2E64EC2846905691 /* Pods-MyPartyPlanner-TaskManagerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPartyPlanner-TaskManagerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A48C1D52F2112DA00BB52C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TaskManagerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManagerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TaskManagerApp/AppDelegate.h; sourceTree = "<group>"; };
@@ -40,13 +41,12 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TaskManagerApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TaskManagerApp/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = TaskManagerApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-TaskManagerApp-TaskManagerAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaskManagerApp-TaskManagerAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-TaskManagerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagerApp.debug.xcconfig"; path = "Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-TaskManagerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagerApp.release.xcconfig"; path = "Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-TaskManagerApp-TaskManagerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagerApp-TaskManagerAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-TaskManagerApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaskManagerApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61C4D6A401BE6C0009C4FB71 /* libPods-MyPartyPlanner-TaskManagerAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPartyPlanner-TaskManagerAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AFF0A2BB24F31464D3B097 /* Pods-MyPartyPlanner-TaskManagerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPartyPlanner-TaskManagerAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		66383F79522F43CC4AC4CDDB /* Pods-MyPartyPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPartyPlanner.debug.xcconfig"; path = "Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		7BB165892A2F626EDCA9744F /* libPods-MyPartyPlanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPartyPlanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TaskManagerApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-TaskManagerApp-TaskManagerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskManagerApp-TaskManagerAppTests.release.xcconfig"; path = "Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		B285DFA12F65A0E9FB3D37C8 /* Pods-MyPartyPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPartyPlanner.release.xcconfig"; path = "Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-TaskManagerApp-TaskManagerAppTests.a in Frameworks */,
+				E36806047A4F9A69A20F657A /* libPods-MyPartyPlanner-TaskManagerAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-TaskManagerApp.a in Frameworks */,
+				6BC896FC52694C69CB1096B0 /* libPods-MyPartyPlanner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-TaskManagerApp.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-TaskManagerApp-TaskManagerAppTests.a */,
+				7BB165892A2F626EDCA9744F /* libPods-MyPartyPlanner.a */,
+				61C4D6A401BE6C0009C4FB71 /* libPods-MyPartyPlanner-TaskManagerAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,10 +146,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-TaskManagerApp.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-TaskManagerApp.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-TaskManagerApp-TaskManagerAppTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-TaskManagerApp-TaskManagerAppTests.release.xcconfig */,
+				66383F79522F43CC4AC4CDDB /* Pods-MyPartyPlanner.debug.xcconfig */,
+				B285DFA12F65A0E9FB3D37C8 /* Pods-MyPartyPlanner.release.xcconfig */,
+				0A068B6D2E64EC2846905691 /* Pods-MyPartyPlanner-TaskManagerAppTests.debug.xcconfig */,
+				65AFF0A2BB24F31464D3B097 /* Pods-MyPartyPlanner-TaskManagerAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -178,9 +178,9 @@
 			productReference = 00E356EE1AD99517003FC87E /* TaskManagerAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* TaskManagerApp */ = {
+		13B07F861A680F5B00A75B9A /* MyPartyPlanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TaskManagerApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MyPartyPlanner" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -188,13 +188,14 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
+				C54605CB273F4227BD7820AA /* Generate Hermes dSYM */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TaskManagerApp;
+			name = MyPartyPlanner;
 			productName = TaskManagerApp;
 			productReference = 13B07F961A680F5B00A75B9A /* TaskManagerApp.app */;
 			productType = "com.apple.product-type.application";
@@ -217,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TaskManagerApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MyPartyPlanner" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -230,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* TaskManagerApp */,
+				13B07F861A680F5B00A75B9A /* MyPartyPlanner */,
 				00E356ED1AD99517003FC87E /* TaskManagerAppTests */,
 			);
 		};
@@ -283,15 +284,19 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
@@ -309,7 +314,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TaskManagerApp-TaskManagerAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MyPartyPlanner-TaskManagerAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,7 +336,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TaskManagerApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MyPartyPlanner-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -344,16 +349,36 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C54605CB273F4227BD7820AA /* Generate Hermes dSYM */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/hermes.framework/hermes",
+			);
+			name = "Generate Hermes dSYM";
+			outputPaths = (
+				"$(DWARF_DSYM_FOLDER_PATH)/hermes.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nHERMES_BINARY=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework/hermes\"\nHERMES_DSYM=\"${DWARF_DSYM_FOLDER_PATH}/hermes.framework.dSYM\"\n\nif [ -f \"$HERMES_BINARY\" ]; then\n  /usr/bin/dsymutil \"$HERMES_BINARY\" -o \"$HERMES_DSYM\"\nelse\n  echo \"warning: Hermes framework binary not found at $HERMES_BINARY\"\nfi\n";
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -361,15 +386,19 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp/Pods-TaskManagerApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner/Pods-MyPartyPlanner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -378,15 +407,19 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaskManagerApp-TaskManagerAppTests/Pods-TaskManagerApp-TaskManagerAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPartyPlanner-TaskManagerAppTests/Pods-MyPartyPlanner-TaskManagerAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +447,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* TaskManagerApp */;
+			target = 13B07F861A680F5B00A75B9A /* MyPartyPlanner */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -422,7 +455,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-TaskManagerApp-TaskManagerAppTests.debug.xcconfig */;
+			baseConfigurationReference = 0A068B6D2E64EC2846905691 /* Pods-MyPartyPlanner-TaskManagerAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -449,7 +482,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-TaskManagerApp-TaskManagerAppTests.release.xcconfig */;
+			baseConfigurationReference = 65AFF0A2BB24F31464D3B097 /* Pods-MyPartyPlanner-TaskManagerAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -473,7 +506,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-TaskManagerApp.debug.xcconfig */;
+			baseConfigurationReference = 66383F79522F43CC4AC4CDDB /* Pods-MyPartyPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -495,7 +528,7 @@
 					"-ObjC",
 					"-Wl,-no_warn_duplicate_libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.partyplanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mypartyplanner;
 				PRODUCT_NAME = TaskManagerApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -505,11 +538,10 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-TaskManagerApp.release.xcconfig */;
+			baseConfigurationReference = B285DFA12F65A0E9FB3D37C8 /* Pods-MyPartyPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6SVRCQ9AH5;
@@ -526,7 +558,7 @@
 					"-ObjC",
 					"-Wl,-no_warn_duplicate_libraries",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.partyplanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.mypartyplanner;
 				PRODUCT_NAME = TaskManagerApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -603,10 +635,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -644,7 +673,6 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -677,10 +705,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -701,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TaskManagerApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MyPartyPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -710,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TaskManagerApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MyPartyPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

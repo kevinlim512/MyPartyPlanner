@@ -22,7 +22,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'TaskManagerApp' do
+target 'MyPartyPlanner' do
   inhibit_all_warnings!
 
   config = use_native_modules!
@@ -107,6 +107,18 @@ target 'TaskManagerApp' do
         config.build_settings['CLANG_WARN_DEPRECATED_DECLARATIONS'] = 'NO'
         config.build_settings['CLANG_WARN_UNREACHABLE_CODE'] = 'NO'
         config.build_settings['GCC_WARN_UNUSED_CONST_VARIABLE'] = 'NO'
+      end
+    end
+
+    # Ensure Hermes builds with dSYMs in Release so App Store Connect can
+    # symbolicate crashes from hermes.framework.
+    installer.pods_project.targets.each do |target|
+      next unless target.name == 'hermes-engine'
+
+      target.build_configurations.each do |config|
+        next unless config.name == 'Release'
+
+        config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf-with-dsym'
       end
     end
   end
