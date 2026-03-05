@@ -4,7 +4,8 @@ MyPartyPlanner is a React Native app for planning an event/party in one place: p
 
 ## App Store
 
-**[Download on the App Store](https://apps.apple.com/sg/app/mypartyplanner/id6758308709 MyPartyPlanner)**
+**Download on the iOS App Store:**
+https://apps.apple.com/sg/app/mypartyplanner/id6758308709
 
 ## Screenshots
 
