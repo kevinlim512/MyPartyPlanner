@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-# You may use http://rbenv.org/ or https://rvm.io/ to install and use this version
-ruby ">= 2.6.10"
+# You may use http://rbenv.org/ or https://rvm.io/ to install and use a compatible version.
+# Bundler 4.x (see `Gemfile.lock`) requires Ruby >= 3.2.
+ruby ">= 3.2.0"
 
 # Exclude problematic versions of cocoapods and activesupport that causes build failures.
 gem 'cocoapods', '>= 1.13', '!= 1.15.0', '!= 1.15.1'

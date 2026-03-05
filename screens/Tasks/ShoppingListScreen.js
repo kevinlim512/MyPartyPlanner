@@ -93,9 +93,12 @@ export default function ShoppingListScreen({ isEditing }) {
       const stored = await AsyncStorage.getItem(SHOPPING_KEY);
       if (stored) {
         setItems(JSON.parse(stored));
+      } else {
+        setItems(prev => (prev.length ? [] : prev));
       }
     } catch (error) {
       console.warn('Failed to load shopping items:', error);
+      setItems(prev => (prev.length ? [] : prev));
     }
   };
 

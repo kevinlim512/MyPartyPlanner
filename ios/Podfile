@@ -73,6 +73,18 @@ target 'MyPartyPlanner' do
       config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = ios_deployment_target
     end
 
+    # Xcode user-script sandboxing can block CocoaPods' XCFramework copy scripts.
+    # In Xcode 26.x this commonly manifests as:
+    #   Sandbox: rsync deny(1) file-write-create .../XCFrameworkIntermediates/.../.Info.plist.*
+    #
+    # Disable user-script sandboxing for Pods targets so the hermes-engine
+    # XCFramework copy phase can rsync its temporary files.
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      end
+    end
+
     # Silence Xcode warnings about script phases lacking outputs by giving those
     # phases explicit outputs and touching them.
     def ensure_script_output(phase, output_path, touch_command)
@@ -110,15 +122,62 @@ target 'MyPartyPlanner' do
       end
     end
 
-    # Ensure Hermes builds with dSYMs in Release so App Store Connect can
-    # symbolicate crashes from hermes.framework.
+    # Hermes is installed as a prebuilt XCFramework by default (RN 0.76.x).
+    # Those binaries often contain debug maps pointing to object files on the
+    # CI machine that produced the artifact (e.g. "/Users/runner/work/...").
+    # Forcing dSYM generation in that case produces hundreds of warnings like:
+    # "unable to open object file: No such file or directory".
+    #
+    # Default to no dSYM generation for Hermes. If you truly need Hermes dSYMs,
+    # prefer building Hermes from source:
+    #   RCT_BUILD_HERMES_FROM_SOURCE=true bundle exec pod install
+    # Or opt-in explicitly:
+    #   RN_HERMES_DSYM=1 bundle exec pod install
+    hermes_generate_dsym = ENV['RN_HERMES_DSYM'] == '1'
     installer.pods_project.targets.each do |target|
       next unless target.name == 'hermes-engine'
 
       target.build_configurations.each do |config|
-        next unless config.name == 'Release'
+        if hermes_generate_dsym
+          config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf-with-dsym'
+        else
+          config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf'
+          config.build_settings['DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT'] = 'NO'
+        end
+      end
+    end
 
-        config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf-with-dsym'
+    # Hermes prebuilt XCFramework slices sometimes still trigger dsymutil warnings
+    # during archive like:
+    # "(arm64) ... unable to open object file: No such file or directory"
+    #
+    # Strip debug info from the copied Hermes framework binary to stop dsymutil
+    # from looking for non-existent CI object files. Opt out with:
+    #   RN_HERMES_STRIP_DEBUG_SYMBOLS=0
+    hermes_xcframework_script = File.join(
+      installer.sandbox.root.to_s,
+      'Target Support Files',
+      'hermes-engine',
+      'hermes-engine-xcframeworks.sh'
+    )
+    if File.exist?(hermes_xcframework_script)
+      script = File.read(hermes_xcframework_script)
+      unless script.include?('RN_HERMES_STRIP_DEBUG_SYMBOLS')
+        injection = <<~'SH'
+
+  if [ "${RN_HERMES_STRIP_DEBUG_SYMBOLS:-1}" = "1" ] && [ "$name" = "hermes-engine/Pre-built" ]; then
+    hermes_binary="${destination}/hermes.framework/hermes"
+    if [ -f "$hermes_binary" ]; then
+      echo "Stripping debug symbols from $hermes_binary"
+      xcrun strip -S -x "$hermes_binary"
+    fi
+  fi
+SH
+        script = script.sub(
+          "echo \"Copied $source to $destination\"",
+          "echo \"Copied $source to $destination\"#{injection}"
+        )
+        File.write(hermes_xcframework_script, script)
       end
     end
   end

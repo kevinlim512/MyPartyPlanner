@@ -31,9 +31,12 @@ function SelectInvitationScreen() {
       const stored = await AsyncStorage.getItem(INVITES_KEY);
       if (stored) {
         setInvitations(JSON.parse(stored));
+      } else {
+        setInvitations(prev => (prev.length ? [] : prev));
       }
     } catch (error) {
       Alert.alert('Error', 'Failed to load invitations.');
+      setInvitations(prev => (prev.length ? [] : prev));
     }
   };
 
@@ -118,9 +121,12 @@ function SendWhatsappScreen() {
       const stored = await AsyncStorage.getItem(GUESTS_KEY);
       if (stored) {
         setGuests(JSON.parse(stored));
+      } else {
+        setGuests(prev => (prev.length ? [] : prev));
       }
     } catch (error) {
       Alert.alert('Error', 'Failed to load contacts.');
+      setGuests(prev => (prev.length ? [] : prev));
     }
   };
 

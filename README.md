@@ -2,6 +2,19 @@
 
 MyPartyPlanner is a React Native app for planning an event/party in one place: party details, tasks, shopping list, guest list, invitations, calendar, and notes.
 
+## App Store
+
+**[Download on the App Store](https://apps.apple.com/sg/app/mypartyplanner/id6758308709 MyPartyPlanner)**
+
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/IMG_8602.PNG" width="180" alt="MyPartyPlanner party screen" />
+  <img src="screenshots/IMG_8603.PNG" width="180" alt="MyPartyPlanner tasks screen" />
+  <img src="screenshots/IMG_8606.PNG" width="180" alt="MyPartyPlanner events screen" />
+</p>
+
+
 ## Features
 
 - **Party details**: name, date, start/end time, venue, and address (saved on-device).
@@ -26,6 +39,7 @@ MyPartyPlanner is a React Native app for planning an event/party in one place: p
 
 - Node.js (LTS recommended) + npm
 - Xcode + CocoaPods (for iOS)
+- Ruby (for CocoaPods via Bundler). macOS system Ruby (`/usr/bin/ruby`) is too old for this repo’s `Gemfile.lock`.
 - Android Studio (for Android)
 
 ### Install
@@ -37,11 +51,17 @@ npm install
 ### iOS
 
 ```bash
+# If `ruby -v` shows `/usr/bin/ruby`, switch to Homebrew Ruby first:
+#   export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
+
 cd ios
-pod install
+bundle install
+bundle exec pod install
 cd ..
 npm run ios
 ```
+
+If you open the project in Xcode, open `ios/MyPartyPlanner.xcworkspace` (not `ios/MyPartyPlanner.xcodeproj`). Opening the `.xcodeproj` will often produce linker errors (e.g. Hermes undefined symbols / missing frameworks) because CocoaPods dependencies aren’t part of the project.
 
 ### Android
 

@@ -76,9 +76,14 @@ export default function TasksScreen({ navigation }) {
         const parsed = JSON.parse(stored);
         setTasks(parsed.filter(t => !t.completed));
         setCompletedTasks(parsed.filter(t => t.completed));
+      } else {
+        setTasks(prev => (prev.length ? [] : prev));
+        setCompletedTasks(prev => (prev.length ? [] : prev));
       }
     } catch (err) {
       console.warn('Failed to load tasks:', err);
+      setTasks(prev => (prev.length ? [] : prev));
+      setCompletedTasks(prev => (prev.length ? [] : prev));
     }
   };
 

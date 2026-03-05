@@ -32,9 +32,12 @@ export default function EditInvitationScreen() {
       const stored = await AsyncStorage.getItem(INVITES_KEY);
       if (stored) {
         setInvitations(JSON.parse(stored));
+      } else {
+        setInvitations(prev => (prev.length ? [] : prev));
       }
     } catch (error) {
       console.warn('Failed to load invitations:', error);
+      setInvitations(prev => (prev.length ? [] : prev));
     }
   }
 

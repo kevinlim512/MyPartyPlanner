@@ -23,9 +23,12 @@ export default function NotesScreen({ navigation }) {
       const stored = await AsyncStorage.getItem(NOTES_KEY);
       if (stored) {
         setNotes(JSON.parse(stored));
+      } else {
+        setNotes(prev => (prev.length ? [] : prev));
       }
     } catch (e) {
       Alert.alert('Error', 'Failed to load notes.');
+      setNotes(prev => (prev.length ? [] : prev));
     }
   };
 
